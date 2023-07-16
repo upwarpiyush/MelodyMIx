@@ -13,13 +13,13 @@ const Sidebar = () => {
   return (
     
     <div className='w-[100px] h-screen flex flex-col items-center justify-between py-5'>
-        <img src={image} className='w-[50px] h-[50px] rounded-md'/>
+        <img src={image} className='w-[50px] h-[50px] rounded-full'/>
 
         <div className='flex flex-col gap-5'>
-            <SidebarButton to="/feed" title="Feed" icon={<MdSpaceDashboard />}/>
-            <SidebarButton to="/trending" title="Trending" icon={<FaGripfire />}/>
+            {/* <SidebarButton to="/feed" title="Feed" icon={<MdSpaceDashboard />}/> */}
+            {/* <SidebarButton to="/trending" title="Trending" icon={<FaGripfire />}/> */}
             <SidebarButton to="/player" title="Player" icon={<FaPlay />}/>
-            <SidebarButton to="/favorites" title="Favorites" icon={<MdFavorite />}/>
+            {/* <SidebarButton to="/favorites" title="Favorites" icon={<MdFavorite />}/> */}
             <SidebarButton to="/" title="Library" icon={<IoLibrary />}/>
         </div>
 

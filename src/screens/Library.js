@@ -9,8 +9,8 @@ const Library = () => {
   useEffect(()=>{
     APIKit.get("me/playlists").then(function(res){
     setPlaylists(res.data.items);
+  });
   },[])
-  })
 
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const Library = () => {
     <div className="w-[calc(100%-100px)] h-screen bg-black rounded-3xl">
       <div className='min-w-[90%] min-h-screen flex flex-row flex-wrap gap-10 p-10' >
         {playlists?.map((playlist)=>(
-        <div className='w-44 h-64 rounded-2xl bg-gradient-to-r from-teal-300  to-teal-900	flex flex-col items-center gap-3 text-red-800 transition duration-200 ease-in hover:scale-105' key={playlist.id} onClick={()=> playPlaylist(playlist.id)}>
+        <div className='w-44 h-64 rounded-2xl bg-gradient-to-r from-teal-300  to-teal-900	flex flex-col items-center gap-3 text-red-800 transition duration-200 ease-in hover:scale-105 cursor-pointer' key={playlist.id} onClick={()=> playPlaylist(playlist.id)}>
           
           <img src={playlist.images[0].url} alt='playlist-img' className='w-[90%] rounded-2xl mt-2'/>
           <div className='font-bold text-lg'>{playlist.name}</div>

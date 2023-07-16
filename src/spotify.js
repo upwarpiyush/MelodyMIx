@@ -1,6 +1,7 @@
 import axios from "axios"
 
-const clientId = "a8fbcc714f0a4a158f2d4baee62667d6"
+// const clientId = "a8fbcc714f0a4a158f2d4baee62667d6"
+const clientId = "7d9076b6d77a491b90dc025d916afa3b"
 const authEndpoint = "https://accounts.spotify.com/authorize?"
 const redirectUri = "http://localhost:3000"
 const scopes = ["user-library-read", "playlist-read-private"]
